@@ -76,6 +76,6 @@ Help us
 
 We always love to hear from you if you have any ideas of how to make the API better. You can contact us directly at <beta@peakium.com> with your suggestions. Also, feel free to fork these docs and send a pull request with improvements!	
 
-Need an Account?
--------
-We're currently in closed beta, but you can signup for an invite at http://peakium.com/
+Need an account?
+----------------
+We're currently in closed beta, but you can signup for an invite at <http://peakium.com/>
