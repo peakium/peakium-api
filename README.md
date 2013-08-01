@@ -25,7 +25,7 @@ Authentication are mandatory for all requests to the API.
 Example on authenticating an API request through curl:
 
 	$ curl https://secure.peakium.com/api/v1/customers \
-		-u pk_gEVUPX6FwObZSgg3v0BjkVxmdzatPyV9: \
+		-u pk_gEVUPX6FwObZSgg3v0BjkVxmdzatPyV9:
 
 SSL
 ---
