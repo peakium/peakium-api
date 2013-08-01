@@ -11,6 +11,7 @@ API Endpoints
 * [Gateway](/sections/gateway.md)
 * [Invoice](/sections/invoice.md)
 * [Subscription](/sections/subscription.md)
+* [Submission Form](/sections/submission_form.md)
 * [Webhook](/sections/webhook.md)
 
 
