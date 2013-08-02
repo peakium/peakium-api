@@ -1,12 +1,12 @@
 Submission Form
-===========
+===============
 
 The submission form resource is not an actual data resource. It is a helper resource that returns submission forms so your customers can be transferred smoothly to the correct location when necessary.
 
 For security, each form contains a field with a salted integrity hash to secure against modification of the `POST` values. For your convenience Peakium automatically build these forms through the API with this resource handle.
 
 Form for new subscriptions
------------------
+--------------------------
 This call will build a form so customers can create new subscriptions through any gateway you have registered at Peakium.
 
 ### Arguments
@@ -54,7 +54,7 @@ Name | Required | Description
 ```
 
 Form for upgrading existing subscriptions
------------------
+-----------------------------------------
 This call will build a form so customers can upgrade or downgrade existing subscriptions through any gateway you have registered at Peakium.
 
 ### Arguments
@@ -101,7 +101,7 @@ Name | Required | Description
 ```
 
 Form for paying invoices
------------------
+------------------------
 This call will build a form so customers can pay invoices through any gateway you have registered at Peakium. It is useful for invoices that cannot be charged automatically (e.g. overdue invoices).
 
 ### Arguments

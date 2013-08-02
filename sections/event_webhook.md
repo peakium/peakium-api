@@ -1,12 +1,12 @@
 Event webhook
-===========
+=============
 
 An event webhook object will be created whenever an event is created. The event webhook is making sure that a specific webhook endpoint receives the event.
 
 The event webhook object is read-only.
 
 The event object
------------------
+----------------
 
 ### Attributes
 
@@ -47,7 +47,7 @@ Name | Type | Description
 ```
 
 List all event webhooks
------------------
+-----------------------
 Returns a list of all event webhooks.
 
 ### Arguments

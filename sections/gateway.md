@@ -1,10 +1,10 @@
 Gateway
-===========
+=======
 
 The gateway object(s) is the gateway(s) that you can use to do payments. The gateway(s) is listed in your Peakium account.
 
 The gateway object
------------------
+------------------
 
 ### Attributes
 
@@ -43,7 +43,7 @@ Name | Type | Description
 ```
 
 List all gateway
------------------
+----------------
 Returns a list of all gateways.
 
 ### Arguments
@@ -89,7 +89,7 @@ Name | Required | Description
 ```
 
 Set a gateway default
------------------
+---------------------
 A specific gateway can be set as the default gateway.
 
 ### Example request
@@ -103,7 +103,7 @@ A specific gateway can be set as the default gateway.
 Will respond with `200 OK` status, and the full gateway object if valid, or fail with HTTP status codes.
 
 Create and update a gateway
------------------
+---------------------------
 A gateway can be created and/or updated over the API.
 
 ### Arguments

@@ -1,10 +1,10 @@
 Invoice
-===========
+=======
 
 The invoice object presents invoices that has been created in relation to a subscription or customer in your account.
 
 The invoice object
------------------
+------------------
 
 ### Attributes
 
@@ -157,7 +157,7 @@ Name | Required | Description
 ```
 
 Attempt payment of an invoice
------------------
+-----------------------------
 It is possible with certain invoices to attempt a payment at the present time. You can request an invoice to be paid through the API.
 
 ### Example request

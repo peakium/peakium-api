@@ -1,12 +1,12 @@
 Customer
-===========
+========
 
 The ID of a customer object is the same as the ID you have given through your application.
 
 The customer object is read only.
 
 The customer object
------------------
+-------------------
 
 ### Attributes
 
@@ -30,7 +30,7 @@ Name | Type | Description
 ```
 
 List all customers
------------------
+------------------
 Returns a list of all customers.
 
 ### Arguments

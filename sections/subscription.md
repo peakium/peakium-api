@@ -1,12 +1,12 @@
 Subscription
-===========
+============
 
 A subscription object is always tied to a [Customer](/sections/customer.md). The subscription token is only unique within the customer scope, thus it is possible to reuse the same subscription token for different customers. For this reason, when you are handling individual subscriptions, you are always required to use the [Customer](/sections/customer.md) resource.
 
 A subscription can be created by a customer through the submission form. The subscription object can be cancelled through the API.
 
 The subscription object
------------------
+-----------------------
 
 ### Attributes
 
@@ -59,7 +59,7 @@ Name | Type | Description
 ```
 
 List all subscriptions
------------------
+----------------------
 Returns a list of all subscriptions.
 
 ### Arguments
@@ -111,7 +111,7 @@ Name | Required | Description
 ```
 
 List all subscriptions for a specific customer
------------------
+----------------------------------------------
 Returns a list of all subscriptions for a specific customer.
 
 ### Arguments
@@ -162,7 +162,7 @@ Name | Required | Description
 ```
 
 Retrieve a specific subscription
------------------
+--------------------------------
 To retrieve a specific subscription resource, you need to use the [Customer](/sections/customer.md) resource for the subscription in the URI.
 
 ### Example request
@@ -198,7 +198,7 @@ To retrieve a specific subscription resource, you need to use the [Customer](/se
 ```
 
 Cancel a subscription
------------------
+---------------------
 This will cancel an active subscription, and stop any future charges. A cancelled subscription cannot be reactivated.
 
 You need to use the [Customer](/sections/customer.md) resource for the subscription in the URI to cancel a subscription.

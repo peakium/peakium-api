@@ -1,10 +1,10 @@
 Webhook
-===========
+=======
 
 Webhook objects define the URL endpoints for webhooks.
 
 The webhook object
------------------
+------------------
 
 ### Attributes
 
@@ -55,7 +55,7 @@ Name | Required | Description
 ```
 
 Create a webhook
------------------
+----------------
 A webhook can be created over the API.
 
 ### Arguments

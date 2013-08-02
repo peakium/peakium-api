@@ -1,5 +1,5 @@
 Event
-===========
+=====
 
 When an event object is created, subsequent event webhooks are created based on the webhook endpoints registered at the moment of the creation.
 
@@ -8,7 +8,7 @@ The event object has a method to be validated for added security.
 An event webhook will be tried to be delivered each hour until delivered, or until 24 tries. The event webhook(s) can, at any time, be requested through the API to be resend to webhook endpoints.
 
 The event object
------------------
+----------------
 
 ### Attributes
 
@@ -38,7 +38,7 @@ Name | Type | Description
 ```
 
 List all events
------------------
+---------------
 Returns a list of all events.
 
 ### Arguments
@@ -92,7 +92,7 @@ To make sure that a request is not forged, you can validate the authenticity of 
 Will respond with `200 OK` status, and the full event object if valid, or fail with failure HTTP status code..
 
 Resending an event
------------------
+------------------
 In certain cases you might want to resend events right away. The resend request can be directed to a specific event webhook endpoint, or to all the event webhooks existing for the event at once.
 
 ### Arguments
