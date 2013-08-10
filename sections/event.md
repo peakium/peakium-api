@@ -17,10 +17,8 @@ Name | Type | Description
 **id** | string |
 **object** | string | Is "event".
 **event** | string | The event type.
-**created** | string |
-**subscription** | object | If referencing a subscription.
-**invoice** | object | If referencing an invoice.
-**charge** | object | If referencing a charge.
+**created** | integer |
+**data** | object | Referencing object, like customer, invoice, or subscription object.
 
 ### Example
 
@@ -30,10 +28,29 @@ Name | Type | Description
 	"object": "event",
 	"event": "subscription.created",
 	"created": 1375217068,
-	"subscription": {
-		"id": "50aaeccb73dd310010"
-		"object": "subscription"
-	},
+	"data": {
+		"token": "50aaeccb73dd310010",
+		"object": "subscription",
+		"created": 1375217068,
+		"display_name": "Plus Plan",
+		"plan": {
+			"period_amount": 1,
+			"period_type": "M",
+			"amount": 7200,
+			"currency": "USD",
+			"discount": 0.0,
+			"item_id": 101
+		},
+		"cycle_number": 1,
+		"period_start": 1375217068,
+		"period_end": 1375217068,
+		"next_charge": 1375217068,
+		"status": "active",
+		"customer": {
+			"id": "cu4321",
+			"object": "customer",
+		}
+	}
 }
 ```
 
@@ -47,8 +64,9 @@ Name | Required | Description
 --:|:-:|:--
 **count** | optional |
 **offset** | optional |
+**customer** | optional |
 **invoice** | optional |
-**subscription** | optional |
+**subscription** | optional | Requires the customer argument to be defined also
 
 ### Example request
 
@@ -67,10 +85,29 @@ Name | Required | Description
 			"object": "event",
 			"event": "subscription.created",
 			"created": 1375217068,
-			"subscription": {
-				"id": "50aaeccb73dd310010"
-				"object": "subscription"
-			},
+			"data": {
+				"token": "50aaeccb73dd310010",
+				"object": "subscription",
+				"created": 1375217068,
+				"display_name": "Plus Plan",
+				"plan": {
+					"period_amount": 1,
+					"period_type": "M",
+					"amount": 7200,
+					"currency": "USD",
+					"discount": 0.0,
+					"item_id": 101
+				},
+				"cycle_number": 1,
+				"period_start": 1375217068,
+				"period_end": 1375217068,
+				"next_charge": 1375217068,
+				"status": "active",
+				"customer": {
+					"id": "cu4321",
+					"object": "customer"
+				}
+			}
 		},
 		{...}
 	]
@@ -85,7 +122,7 @@ To make sure that a request is not forged, you can validate the authenticity of 
 
 	$ curl https://secure.peakium.com/api/v1/events/ev_TlSEvdkrRAg4aD/validate/ \
 		-u pk_gEVUPX6FwObZSgg3v0BjkVxmdzatPyV9: \
-		-d '{"id":"ev_TlSEvdkrRAg4aD","object":"event","event":"subscription.created","created":1375217068,"subscription":{"id":"50aaeccb73dd310010""object":"subscription"}'
+		-d '{"id":"ev_TlSEvdkrRAg4aD","object":"event","event":"subscription.created","created":1375217068,"data":{"token":"50aaeccb73dd310010","object":"subscription","created":1375217068,"display_name":"PlusPlan","plan":{"period_amount":1,"period_type":"M","amount":7200,"currency":"USD","discount":0.0,"item_id":101},"cycle_number":1,"period_start":1375217068,"period_end":1375217068,"next_charge":1375217068,"status":"active","customer":{"id":"cu4321","object":"customer"}}}'
 
 ### Example response
 

@@ -14,7 +14,8 @@ Name | Type | Description
 --:|:-:|:--
 **id** | string |
 **object** | string | Is "customer".
-**balances** | object | A list of the customer's balances separated into currencies.
+**created** | integer |
+**balances** | list | A list of the customer's balances separated into currencies.
 
 
 ### Example
@@ -23,6 +24,7 @@ Name | Type | Description
 {
 	"id": "cu4321",
 	"object": "customer",
+	"created": 1375217068,
 	"balances": {
 		"USD": 5612
 	},
@@ -55,6 +57,7 @@ Name | Required | Description
 		{
 			"id": "cu4321",
 			"object": "customer",
+			"created": 1375217068,
 			"balances": {
 				"USD": 5612
 			},

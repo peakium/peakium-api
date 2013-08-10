@@ -12,6 +12,7 @@ Name | Type | Description
 --:|:-:|:--
 **id** | string |
 **object** | string | Is "invoice".
+**created** | integer |
 **due** | integer | When the invoice is to be paid the latest.
 **locked** | boolean |
 **timestamp_locked** | integer |
@@ -19,6 +20,7 @@ Name | Type | Description
 **timestamp_paid** | integer |
 **retracted** | boolean |
 **timestamp_retracted** | integer |
+**type** | string | Describes if the invoice is a recurring event, or is a user based action.
 **calculated_total** | array | An array containing the currency and amount calculated to be paid in the invoice. The invoice might change during it's lifetime, so it is a current view of the total for the invoice.
 **calculated_total**->**currency**  | string |
 **calculated_total**->**amount**  | integer |
@@ -33,6 +35,7 @@ Name | Type | Description
 {
 	"id": "in_TlQFJ1ZvXfuX2g",
 	"object": "invoice",
+	"created": 1375217068,
 	"due_date": 1375217068,
 	"locked": true,
 	"timestamp_locked": 1375217068,
@@ -40,6 +43,7 @@ Name | Type | Description
 	"timestamp_paid": 1375217068,
 	"retracted": false,
 	"timestamp_retracted": null,
+	"type": "single",
 	"calculated_total": {
 		"currency": "USD",
 		"amount": 7200
@@ -70,7 +74,7 @@ Name | Type | Description
 	},
 	"charge": {
 		"object": "charge",
-		"amount": 1200,
+		"amount": 7200,
 		"currency": "USD",
 		"paid": true,
 		"timestamp_paid": 1375217068,
@@ -107,6 +111,7 @@ Name | Required | Description
 		{
 			"id": "in_TlQFJ1ZvXfuX2g",
 			"object": "invoice",
+			"created": 1375217068,
 			"due_date": 1375217068,
 			"locked": true,
 			"timestamp_locked": 1375217068,
@@ -114,6 +119,7 @@ Name | Required | Description
 			"timestamp_paid": 1375217068,
 			"retracted": false,
 			"timestamp_retracted": null,
+			"type": "single",
 			"calculated_total": {
 				"currency": "USD",
 				"amount": 7200
@@ -144,7 +150,7 @@ Name | Required | Description
 			},
 			"charge": {
 				"object": "charge",
-				"amount": 1200,
+				"amount": 7200,
 				"currency": "USD",
 				"paid": true,
 				"timestamp_paid": 1375217068,
@@ -158,7 +164,7 @@ Name | Required | Description
 
 Attempt payment of an invoice
 -----------------------------
-It is possible with certain invoices to attempt a payment at the present time. You can request an invoice to be paid through the API.
+It is possible with certain invoices to attempt a payment at the present time. You can request an invoice to be paid through the API. Payments are only possible for API type gateways, and not external type gateways.
 
 ### Example request
 

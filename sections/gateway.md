@@ -12,8 +12,8 @@ Name | Type | Description
 --:|:-:|:--
 **id** | string |
 **object** | string | Is "gateway".
-**name** | string | The internal reference name for your gateway.
-**display_name** | string | The public display name for your gateway.
+**created** | integer |
+**name** | string | The reference name for your gateway.
 **active** | boolean |
 **default** | boolean |
 **module** | object | The gateway module name.
@@ -25,6 +25,7 @@ Name | Type | Description
 {
 	"id": "gw_TlTNIsHSf5lh85",
 	"object": "gateway",
+	"created": 1375217068,
 	"name": "Paypal",
 	"display_name": "Paypal",
 	"active": true,
@@ -44,7 +45,7 @@ Name | Type | Description
 
 List all gateway
 ----------------
-Returns a list of all gateways.
+Returns a list of all available gateways.
 
 ### Arguments
 
@@ -68,6 +69,7 @@ Name | Required | Description
 		{
 			"id": "gw_TlTNIsHSf5lh85",
 			"object": "gateway",
+			"created": 1375217068,
 			"name": "Paypal",
 			"display_name": "Paypal",
 			"active": true,
@@ -88,9 +90,9 @@ Name | Required | Description
 }
 ```
 
-Set a gateway default
----------------------
-A specific gateway can be set as the default gateway.
+Set a gateway as the default gateway
+------------------------------------
+A specific gateway can be set as the default gateway to use. Any previous default gateway will be unset as the default gateway.
 
 ### Example request
 
@@ -102,7 +104,7 @@ A specific gateway can be set as the default gateway.
 
 Will respond with `200 OK` status, and the full gateway object if valid, or fail with HTTP status codes.
 
-Create and update a gateway
+Create or update a gateway
 ---------------------------
 A gateway can be created and/or updated over the API.
 
@@ -111,7 +113,6 @@ A gateway can be created and/or updated over the API.
 Name | Required/Optional | Description
 --:|:-:|:--
 **name** | required | The gateway reference name.
-**display_name** | required | The gateway display name.
 **module** | required | The gateway module name.
 **settings** | required | An array of settings for the gateway.
 

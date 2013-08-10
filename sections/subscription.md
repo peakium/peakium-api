@@ -18,7 +18,7 @@ Name | Type | Description
 **display_name** | string |
 **plan** | array | 
 **plan**->**period_amount** | integer | 
-**plan**->**period_type** | string | 
+**plan**->**period_type** | string | day, month or year
 **plan**->**amount** | integer | 
 **plan**->**currency** | string | 
 **plan**->**discount** | float | 
@@ -40,7 +40,7 @@ Name | Type | Description
 	"display_name": "Plus Plan",
 	"plan": {
 		"period_amount": 1,
-		"period_type": "M",
+		"period_type": "month",
 		"amount": 7200,
 		"currency": "USD",
 		"discount": 0.0,
@@ -89,7 +89,7 @@ Name | Required | Description
 			"display_name": "Plus Plan",
 			"plan": {
 				"period_amount": 1,
-				"period_type": "M",
+				"period_type": "month",
 				"amount": 7200,
 				"currency": "USD",
 				"discount": 0.0,
@@ -140,7 +140,7 @@ Name | Required | Description
 			"display_name": "Plus Plan",
 			"plan": {
 				"period_amount": 1,
-				"period_type": "M",
+				"period_type": "month",
 				"amount": 7200,
 				"currency": "USD",
 				"discount": 0.0,
@@ -179,7 +179,7 @@ To retrieve a specific subscription resource, you need to use the [Customer](/se
 	"display_name": "Plus Plan",
 	"plan": {
 		"period_amount": 1,
-		"period_type": "M",
+		"period_type": "month",
 		"amount": 7200,
 		"currency": "USD",
 		"discount": 0.0,
@@ -219,7 +219,7 @@ You need to use the [Customer](/sections/customer.md) resource for the subscript
 	"display_name": "Plus Plan",
 	"plan": {
 		"period_amount": 1,
-		"period_type": "M",
+		"period_type": "month",
 		"amount": 7200,
 		"currency": "USD",
 		"discount": 0.0,

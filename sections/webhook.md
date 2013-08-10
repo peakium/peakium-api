@@ -11,6 +11,7 @@ The webhook object
 Name | Type | Description
 --:|:-:|:--
 **object** | string | Will be "webhook"
+**created** | integer |
 **url** | string |
 
 ### Example
@@ -18,6 +19,7 @@ Name | Type | Description
 ```json
 {
 	"object": "webhook",
+	"created": 1375217068,
 	"url": "http://example.com/webhook_endpoint/"
 }
 ```
@@ -47,6 +49,7 @@ Name | Required | Description
 	"data": [
 		{
 			"object": "webhook",
+			"created": 1375217068,
 			"url": "http://example.com/webhook_endpoint/"
 		},
 		{...}

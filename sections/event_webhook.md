@@ -13,10 +13,11 @@ The event object
 Name | Type | Description
 --:|:-:|:--
 **object** | string | Is "event_webhook"
+**created** | integer |
 **number_of_attempted_deliveries** | integer |
 **last_delivery_attempt** | integer | The timestamp for the last delivery attempt
 **delivered** | boolean |
-**delivered_timestamp** | integer |
+**timestamp_delivered** | integer |
 **webhook** | object | The webhook object.
 **event** | object | The event object.
 
