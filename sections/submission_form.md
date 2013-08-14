@@ -162,7 +162,7 @@ Name | Required | Description
 
 ### Example request
 
-	curl https://secure.peakium.com/api/v1/submission_form/pay-invoice/ \
+	curl https://secure.peakium.com/api/v1/submission_form/single-payment/ \
 		-u pk_gEVUPX6FwObZSgg3v0BjkVxmdzatPyV9: \
 		-p customer="cu4321" \
 		-p items[0][item_id]=1 \

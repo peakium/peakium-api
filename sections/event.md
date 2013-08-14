@@ -141,7 +141,7 @@ Name | Required | Description
 
 ### Example request
 
-	$ curl https://secure.peakium.com/api/v1/events/ev_TlSEvdkrRAg4aD/validate/ \
+	$ curl https://secure.peakium.com/api/v1/events/ev_TlSEvdkrRAg4aD/send/ \
 		-u pk_gEVUPX6FwObZSgg3v0BjkVxmdzatPyV9: \
 		-d force=true \
 		-d url="http://example.com/webhook_endpoint/"
