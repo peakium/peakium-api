@@ -5,8 +5,8 @@ An event webhook object will be created whenever an event is created. The event 
 
 The event webhook object is read-only.
 
-The event object
-----------------
+The event webhook object
+------------------------
 
 ### Attributes
 
