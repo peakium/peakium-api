@@ -54,6 +54,21 @@ Name | Type | Description
 }
 ```
 
+Event types
+-----------
+
+Event | Description
+--:|:--
+**customer.created** | 
+**invoice.locked** | 
+**invoice.paid** | 
+**invoice.payment_failed** | 
+**payment_session.started** | 
+**subscription.cancelled** | 
+**subscription.created** | 
+**subscription.updated** | 
+
+
 List all events
 ---------------
 Returns a list of all events.
