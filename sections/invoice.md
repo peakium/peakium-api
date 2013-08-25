@@ -95,6 +95,7 @@ Name | Required | Description
 **offset** | optional |
 **customer** | optional |
 **overdue** | optional | Boolean presenting if only overdue invoices should be returned
+**item_id** | optional | Return invoices containing invoice items with certain item id
 
 ### Example request
 
