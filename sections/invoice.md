@@ -36,7 +36,7 @@ Name | Type | Description
 	"id": "in_TlQFJ1ZvXfuX2g",
 	"object": "invoice",
 	"created": 1375217068,
-	"due_date": 1375217068,
+	"due": 1375217068,
 	"locked": true,
 	"timestamp_locked": 1375217068,
 	"paid": true,
@@ -63,7 +63,7 @@ Name | Type | Description
 			"discount": 0.0,
 			"total_amount": 7200,
 			"reference": {
-				"id": "50aaeccb73dd310010"
+				"id": "50aaeccb73dd310010",
 				"object": "subscription"
 			}
 		}
@@ -113,7 +113,7 @@ Name | Required | Description
 			"id": "in_TlQFJ1ZvXfuX2g",
 			"object": "invoice",
 			"created": 1375217068,
-			"due_date": 1375217068,
+			"due": 1375217068,
 			"locked": true,
 			"timestamp_locked": 1375217068,
 			"paid": true,
