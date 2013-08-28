@@ -51,33 +51,12 @@ Name | Type | Description
 		"payment_discount": 0.00,
 		"return_url_ok": "http://example.org/payment/success/",
 		"return_url_error: "http://example.org/payment/error/",
-		"publishable_key": "pk_QTBkCKdRworbXYZens4V4LZZs1X00FeM"
-		"gateway": "gw_TlTNIsHSf5lh85"
+		"publishable_key": "pk_QTBkCKdRworbXYZens4V4LZZs1X00FeM",
+		"gateway": "gw_TlTNIsHSf5lh85",
 		"integrity_value": "b860f950df56104a9328e44f6b3ce6e30f6db55a"
 	},
-	"gateway": {
-		"id": "gw_TlTNIsHSf5lh85",
-		"object": "gateway",
-		"created": 1375217068,
-		"name": "Paypal",
-		"display_name": "Paypal",
-		"active": true,
-		"default": false,
-		"module": {
-			"object": "gateway_module",
-			"name": "Paypal_Website_Payments_Standard",
-			"required_fields": [
-				"paypal_email"
-			]
-		},
-		"settings": [
-			"paypal_email": "paypal@example.com"
-		],
-	},
-	"customer": {
-		"id": "cu4321",
-		"object": "customer",
-	},
+	"gateway": "gw_TlTNIsHSf5lh85",
+	"customer": "cu4321",
 	"charge": {
 		"object": "charge",
 		"amount": 7200,
@@ -135,33 +114,12 @@ Name | Required | Description
 				"payment_discount": 0.00,
 				"return_url_ok": "http://example.org/payment/success/",
 				"return_url_error: "http://example.org/payment/error/",
-				"publishable_key": "pk_QTBkCKdRworbXYZens4V4LZZs1X00FeM"
-				"gateway": "gw_TlTNIsHSf5lh85"
+				"publishable_key": "pk_QTBkCKdRworbXYZens4V4LZZs1X00FeM",
+				"gateway": "gw_TlTNIsHSf5lh85",
 				"integrity_value": "b860f950df56104a9328e44f6b3ce6e30f6db55a"
 			},
-			"gateway": {
-				"id": "gw_TlTNIsHSf5lh85",
-				"object": "gateway",
-				"created": 1375217068,
-				"name": "Paypal",
-				"display_name": "Paypal",
-				"active": true,
-				"default": false,
-				"module": {
-					"object": "gateway_module",
-					"name": "Paypal_Website_Payments_Standard",
-					"required_fields": [
-						"paypal_email"
-					]
-				},
-				"settings": [
-					"paypal_email": "paypal@example.com"
-				],
-			},
-			"customer": {
-				"id": "cu4321",
-				"object": "customer",
-			},
+			"gateway": "gw_TlTNIsHSf5lh85",
+			"customer": "cu4321",
 			"charge": {
 				"object": "charge",
 				"amount": 7200,

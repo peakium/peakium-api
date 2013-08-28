@@ -70,7 +70,7 @@ Name | Type | Description
 	],
 	"customer": {
 		"id": "cu4321",
-		"object": "customer",
+		"object": "customer"
 	},
 	"charge": {
 		"object": "charge",
@@ -140,14 +140,14 @@ Name | Required | Description
 					"discount": 0.0,
 					"total_amount": 7200,
 					"reference": {
-						"id": "50aaeccb73dd310010"
+						"id": "50aaeccb73dd310010",
 						"object": "subscription"
 					}
 				}
 			],
 			"customer": {
 				"id": "cu4321",
-				"object": "customer",
+				"object": "customer"
 			},
 			"charge": {
 				"object": "charge",

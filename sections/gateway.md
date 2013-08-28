@@ -37,9 +37,9 @@ Name | Type | Description
 			"paypal_email"
 		]
 	},
-	"settings": [
+	"settings": {
 		"paypal_email": "paypal@example.com"
-	],
+	}
 }
 ```
 
@@ -81,9 +81,9 @@ Name | Required | Description
 					"paypal_email"
 				]
 			},
-			"settings": [
+			"settings": {
 				"paypal_email": "paypal@example.com"
-			],
+			}
 		},
 		{...}
 	]

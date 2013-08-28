@@ -31,7 +31,7 @@ Name | Type | Description
 	"delivered": true,
 	"delivered_timestamp": 1375217068,
 	"webhook": {
-		"object": "webhook"
+		"object": "webhook",
 		"url": "http://example.com/webhook_endpoint/"
 	},
 	"event": {
@@ -40,7 +40,7 @@ Name | Type | Description
 		"event": "subscription.created",
 		"created": 1375217068,
 		"subscription": {
-			"id": "50aaeccb73dd310010"
+			"id": "50aaeccb73dd310010",
 			"object": "subscription"
 		},
 	},
@@ -79,7 +79,7 @@ Name | Required | Description
 			"delivered": true,
 			"delivered_timestamp": 1375217068,
 			"webhook": {
-				"object": "webhook"
+				"object": "webhook",
 				"url": "http://example.com/webhook_endpoint/"
 			},
 			"event": {
@@ -88,7 +88,7 @@ Name | Required | Description
 				"event": "subscription.created",
 				"created": 1375217068,
 				"subscription": {
-					"id": "50aaeccb73dd310010"
+					"id": "50aaeccb73dd310010",
 					"object": "subscription"
 				},
 			},
