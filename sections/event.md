@@ -18,7 +18,7 @@ Name | Type | Description
 **object** | string | Is "event".
 **event** | string | The event type.
 **created** | integer |
-**data** | object | Referencing object, like customer, invoice, or subscription object.
+**data** | object | Referencing data. E.g. customer, invoice or subscription.
 
 ### Example
 
@@ -29,26 +29,28 @@ Name | Type | Description
 	"event": "subscription.created",
 	"created": 1375217068,
 	"data": {
-		"token": "50aaeccb73dd310010",
-		"object": "subscription",
-		"created": 1375217068,
-		"display_name": "Plus Plan",
-		"plan": {
-			"period_amount": 1,
-			"period_type": "M",
-			"amount": 7200,
-			"currency": "USD",
-			"discount": 0.0,
-			"item_id": 101
-		},
-		"cycle_number": 1,
-		"period_start": 1375217068,
-		"period_end": 1375217068,
-		"next_charge": 1375217068,
-		"status": "active",
-		"customer": {
-			"id": "cu4321",
-			"object": "customer",
+		"object": {
+			"token": "50aaeccb73dd310010",
+			"object": "subscription",
+			"created": 1375217068,
+			"display_name": "Plus Plan",
+			"plan": {
+				"period_amount": 1,
+				"period_type": "M",
+				"amount": 7200,
+				"currency": "USD",
+				"discount": 0.0,
+				"item_id": 101
+			},
+			"cycle_number": 1,
+			"period_start": 1375217068,
+			"period_end": 1375217068,
+			"next_charge": 1375217068,
+			"status": "active",
+			"customer": {
+				"id": "cu4321",
+				"object": "customer",
+			}
 		}
 	}
 }
@@ -81,7 +83,7 @@ Name | Required | Description
 **offset** | optional |
 **customer** | optional |
 **invoice** | optional |
-**subscription** | optional | Requires the customer argument to be defined also
+**subscription** | optional | Requires the customer argument to be defined also.
 
 ### Example request
 
@@ -101,26 +103,28 @@ Name | Required | Description
 			"event": "subscription.created",
 			"created": 1375217068,
 			"data": {
-				"token": "50aaeccb73dd310010",
-				"object": "subscription",
-				"created": 1375217068,
-				"display_name": "Plus Plan",
-				"plan": {
-					"period_amount": 1,
-					"period_type": "M",
-					"amount": 7200,
-					"currency": "USD",
-					"discount": 0.0,
-					"item_id": 101
-				},
-				"cycle_number": 1,
-				"period_start": 1375217068,
-				"period_end": 1375217068,
-				"next_charge": 1375217068,
-				"status": "active",
-				"customer": {
-					"id": "cu4321",
-					"object": "customer"
+				"object": {
+					"token": "50aaeccb73dd310010",
+					"object": "subscription",
+					"created": 1375217068,
+					"display_name": "Plus Plan",
+					"plan": {
+						"period_amount": 1,
+						"period_type": "M",
+						"amount": 7200,
+						"currency": "USD",
+						"discount": 0.0,
+						"item_id": 101
+					},
+					"cycle_number": 1,
+					"period_start": 1375217068,
+					"period_end": 1375217068,
+					"next_charge": 1375217068,
+					"status": "active",
+					"customer": {
+						"id": "cu4321",
+						"object": "customer"
+					}
 				}
 			}
 		},
