@@ -21,7 +21,7 @@ Name | Required | Description
 **period_type** | required | day, month or year
 **payment_amount** | required |
 **payment_currency** | required |
-**payment_discount** | required |
+**payment_discount** | optional |
 **return_url_ok** | required |
 **return_url_error** | required |
 **gateway** | optional | If not defined, the gateway parameter will be set automatically depending on default payment method for your customer, and your default gateway.
@@ -70,7 +70,7 @@ Name | Required | Description
 **period_type** | required | day, month or year
 **payment_amount** | required |
 **payment_currency** | required |
-**payment_discount** | required |
+**payment_discount** | optional |
 **return_url_ok** | required |
 **return_url_error** | required |
 **gateway** | optional | If not defined, the gateway parameter will be set automatically depending on default payment method for your customer, and your default gateway.
