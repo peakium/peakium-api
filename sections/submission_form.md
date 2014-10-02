@@ -5,6 +5,8 @@ The submission form resource is not an actual data resource. It is a helper reso
 
 For security, each form contains a field with a salted integrity hash to secure against modification of the `POST` values. For your convenience Peakium automatically build these forms through the API with this resource handle.
 
+When user is returned to return_url_ok, either a *invoice* or *payment_session* param will be set. When an *invoice* param is set, it means that the payment has gone through, while *payment_session* means that the user is currently paying with an external gateway (like bank transfer).
+
 Form for new subscriptions
 --------------------------
 This call will build a form so customers can create new subscriptions through any gateway you have registered at Peakium.
@@ -15,15 +17,19 @@ Name | Required | Description
 --:|:-:|:--
 **customer** | required | The reference id for your customer object in your application.
 **subscription** | required | The reference id for your customer-specific subscription object in your application.
-**item_description** | required |
-**item_id** | required |
-**period_amount** | required |
+**items** | required | A list of items the subscription has
+**items**>**item_id** | required |
+**items**>**item_description** | required |
+**items**>**unit_amount** | required |
+**items**>**currency** | optional |
+**items**>**quantity** | optional |
+**items**>**discount** | optional |
+**period_amount** | required | Number of days, months or years
 **period_type** | required | day, month or year
-**payment_amount** | required |
-**payment_currency** | required |
-**payment_discount** | optional |
+**payment_currency** | required | If currency in an item is set this is not needed
 **return_url_ok** | required |
 **return_url_error** | required |
+**pro_rata** | optional |
 **gateway** | optional | If not defined, the gateway parameter will be set automatically depending on default payment method for your customer, and your default gateway.
 **submit_button_text** | optional | What text the submit button should contain. Default is "*Click here if you are not redirected within 10 seconds*".
 **auto_submit_page** | optional | A boolean value representing if the returning HTML should include the full auto submit page. If `false`, or undefined, only the form element will be returned.
@@ -64,15 +70,19 @@ Name | Required | Description
 --:|:-:|:--
 **customer** | required | The reference id for your customer object in your application.
 **subscription** | required | The reference id for your customer-specific subscription object in your application.
-**item_description** | required |
-**item_id** | required |
-**period_amount** | required |
+**items** | required | A list of items the subscription has
+**items**>**item_id** | required |
+**items**>**item_description** | required |
+**items**>**unit_amount** | required |
+**items**>**currency** | optional |
+**items**>**quantity** | optional |
+**items**>**discount** | optional |
+**period_amount** | required | Number of days, months or years
 **period_type** | required | day, month or year
-**payment_amount** | required |
-**payment_currency** | required |
-**payment_discount** | optional |
+**payment_currency** | required | If currency in an item is set this is not needed
 **return_url_ok** | required |
 **return_url_error** | required |
+**pro_rata** | optional |
 **gateway** | optional | If not defined, the gateway parameter will be set automatically depending on default payment method for your customer, and your default gateway.
 **submit_button_text** | optional | What text the submit button should contain. Default is "*Click here if you are not redirected within 10 seconds*".
 **auto_submit_page** | optional | A boolean value representing if the returning HTML should include the full auto submit page. If `false`, or undefined, only the form element will be returned.
@@ -177,7 +187,6 @@ Name | Required | Description
 		-p items[1][currency]="USD" \
 		-p items[1][quantity]=1" \
 		-p items[1][discount]=0.0 \
-		-p invoice="in_TlQFJ1ZvXfuX2g" \
 		-p return_url_ok="http://example.org/payment/success/" \
 		-p return_url_error="http://example.org/payment/error/"
 

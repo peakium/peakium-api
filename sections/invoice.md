@@ -53,6 +53,7 @@ Name | Type | Description
 		{
 			"object": "invoice_item",
 			"type": "debit",
+			"sequence": 1,
 			"description": "Plus Plan",
 			"item_id": 101,
 			"unit_amount": 7200,
@@ -78,7 +79,13 @@ Name | Type | Description
 		"currency": "USD",
 		"paid": true,
 		"timestamp_paid": 1375217068,
-		"status": "completed"
+		"status": "completed",
+		"refunded": false,
+		"refunds": {
+			"object": "list",
+			"count": 0,
+			"data": []
+		}
 	}
 }
 ```
@@ -130,6 +137,7 @@ Name | Required | Description
 				{
 					"object": "invoice_item",
 					"type": "debit",
+					"sequence": 1,
 					"description": "Plus Plan",
 					"item_id": 101,
 					"unit_amount": 7200,
@@ -155,7 +163,13 @@ Name | Required | Description
 				"currency": "USD",
 				"paid": true,
 				"timestamp_paid": 1375217068,
-				"status": "completed"
+				"status": "completed",
+				"refunded": false,
+				"refunds": {
+					"object": "list",
+					"count": 0,
+					"data": []
+				}
 			}
 		},
 		{...}

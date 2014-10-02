@@ -12,23 +12,27 @@ The subscription object
 
 Name | Type | Description
 --:|:-:|:--
-**id** | string |
+**token** | string | The token is under the scope of a customer
 **object** | string | Will be "subscription"
 **created** | integer |
-**display_name** | string |
 **plan** | array | 
 **plan**->**period_amount** | integer | 
 **plan**->**period_type** | string | day, month or year
-**plan**->**amount** | integer | 
+**plan**->**items** | object | A list of items the subscription has
+**plan**->**items**>**item_id** | required |
+**plan**->**items**>**item_description** | required |
+**plan**->**items**>**unit_amount** | required |
+**plan**->**items**>**currency** | optional |
+**plan**->**items**>**quantity** | optional |
+**plan**->**items**>**discount** | optional |
 **plan**->**currency** | string | 
-**plan**->**discount** | float | 
-**plan**->**item_id** | integer | 
 **cycle_number** | integer |
 **period_start** | integer |
 **period_end** | integer |
 **next_charge** | integer |
 **status** | string |
 **customer** | object |
+**metadata** | object |
 
 ### Example
 

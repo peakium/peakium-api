@@ -61,14 +61,16 @@ Event types
 
 Event | Description
 --:|:--
-**customer.created** | 
-**invoice.locked** | 
-**invoice.paid** | 
-**invoice.payment_failed** | 
-**payment_session.started** | 
-**subscription.cancelled** | 
-**subscription.created** | 
-**subscription.updated** | 
+**customer.created** | A customer has been created
+**customer.updated** |  A customer has been updated
+**invoice.created** | An invoice has been created. You should note that items might change before invoice.locked.
+**invoice.locked** | An invoice has been locked for payment. There will be no further changes to the invoice.
+**invoice.paid** | An invoice has been paid.
+**invoice.payment_failed** | An invoice could not be paid.
+**payment_session.started** | Payment session has been started.
+**subscription.cancelled** | A subscription has been cancelled.
+**subscription.created** | A subscription has been created.
+**subscription.updated** | A subscription has been updated.
 
 
 List all events
