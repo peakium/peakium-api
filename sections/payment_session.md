@@ -20,7 +20,7 @@ Name | Type | Description
 **action**  | string | Type of action the user has requested
 **ip**  | string |
 **user_agent**  | string |
-**post_values**  | array |
+**parameters**  | array |
 **gateway**  | object | The gateway object used for the payment session.
 **customer**  | object | Will be populated if a customer is identified.
 **charge**  | object |

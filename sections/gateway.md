@@ -16,7 +16,8 @@ Name | Type | Description
 **name** | string | The reference name for your gateway.
 **active** | boolean |
 **default** | boolean |
-**module** | object | The gateway module name.
+**necessary_gateway_setting_values** | object | An array of values that is necessary to set at the gateway.
+**module** | object | The gateway module.
 **settings** | array |
 
 ### Example
@@ -30,12 +31,21 @@ Name | Type | Description
 	"display_name": "Paypal",
 	"active": true,
 	"default": false,
+	"necessary_gateway_setting_values": {},
 	"module": {
 		"object": "gateway_module",
-		"name": "Paypal_Website_Payments_Standard",
+		"name": "Paypal_Payments_Standard",
 		"required_fields": [
 			"paypal_email"
-		]
+		],
+		"necessary_gateway_settings": [
+			"instant_payment_notification_url"
+		],
+		"required_field_parameters": {
+			"paypal_email": {
+				"description": "The e-mail of the Paypal account."
+			}
+		}
 	},
 	"settings": {
 		"paypal_email": "paypal@example.com"
@@ -74,12 +84,21 @@ Name | Required | Description
 			"display_name": "Paypal",
 			"active": true,
 			"default": false,
+			"necessary_gateway_setting_values": {},
 			"module": {
 				"object": "gateway_module",
-				"name": "Paypal_Website_Payments_Standard",
+				"name": "Paypal_Payments_Standard",
 				"required_fields": [
 					"paypal_email"
-				]
+				],
+				"necessary_gateway_settings": [
+					"instant_payment_notification_url"
+				],
+				"required_field_parameters": {
+					"paypal_email": {
+						"description": "The e-mail of the Paypal account."
+					}
+				}
 			},
 			"settings": {
 				"paypal_email": "paypal@example.com"
@@ -122,7 +141,7 @@ Name | Required/Optional | Description
 		-u pk_gEVUPX6FwObZSgg3v0BjkVxmdzatPyV9: \
 		-d name="Paypal" \
 		-d display_name="Paypal" \
-		-d module="Paypal_Website_Payments_Standard" \
+		-d module="Paypal_Payments_Standard" \
 		-d settings["paypal_email"]="paypal@example.com"
 
 ### Example request update
@@ -131,9 +150,28 @@ Name | Required/Optional | Description
 		-u pk_gEVUPX6FwObZSgg3v0BjkVxmdzatPyV9: \
 		-d name="Paypal" \
 		-d display_name="Paypal" \
-		-d module="Paypal_Website_Payments_Standard" \
+		-d module="Paypal_Payments_Standard" \
 		-d settings["paypal_email"]="paypal@example.com"
 
 ### Example response
 
 Will respond with `200 OK` status, and the full gateway object if valid, or fail with failure HTTP status code.
+
+Delete a gateway
+---------------------
+Only gateways that has no payment data can be deleted.
+
+### Example request
+
+	$ curl https://secure.peakium.com/api/v1/gateways/gw_TlTNIsHSf5lh85/ \ \
+		-u pk_gEVUPX6FwObZSgg3v0BjkVxmdzatPyV9: \
+		-X DELETE
+
+### Example response
+
+```json
+{
+	"id": "gw_TlTNIsHSf5lh85",
+	"deleted": true
+}
+```

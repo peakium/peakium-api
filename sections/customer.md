@@ -16,6 +16,7 @@ Name | Type | Description
 **object** | string | Is "customer".
 **created** | integer |
 **balances** | list | A list of the customer's balances separated into currencies.
+**metadata** | object |
 
 
 ### Example
@@ -28,6 +29,7 @@ Name | Type | Description
 	"balances": {
 		"USD": 5612
 	},
+	"metadata": {}
 }
 ```
 
@@ -61,8 +63,35 @@ Name | Required | Description
 			"balances": {
 				"USD": 5612
 			},
+			"metadata": {}
 		},
 		{...}
 	]
 }
 ```
+
+Create or update customer
+-------------------------
+
+### Arguments
+
+Name | Required/Optional | Description
+--:|:-:|:--
+**id** | required | The unique customer ID.
+**metadata** | optional | An array.
+
+### Example request create
+
+	$ curl https://secure.peakium.com/api/v1/customers/ \
+		-u pk_gEVUPX6FwObZSgg3v0BjkVxmdzatPyV9: \
+		-d id="UNIQUE_ID"
+
+### Example request update
+
+	$ curl https://secure.peakium.com/api/v1/customers/UNIQUE_ID/ \
+		-u pk_gEVUPX6FwObZSgg3v0BjkVxmdzatPyV9: \
+		-d metadata[name]="Customer Name"
+
+### Example response
+
+Will respond with `200 OK` status, and the full customer object if valid, or fail with failure HTTP status code.

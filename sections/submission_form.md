@@ -34,6 +34,7 @@ Name | Required | Description
 **submit_button_text** | optional | What text the submit button should contain. Default is "*Click here if you are not redirected within 10 seconds*".
 **auto_submit_page** | optional | A boolean value representing if the returning HTML should include the full auto submit page. If `false`, or undefined, only the form element will be returned.
 **auto_submit_page_title** | optional | A string for the title to display in the auto submit page. Default is "*Redirecting to payment method...*"
+**metadata** | optional | An array of various metadata fields. An example would be: { customer: { user_id: "1234" }, subscription: { extra: "data", invoice: { extra: "data" } } }
 
 ### Example request
 

@@ -28,6 +28,7 @@ Name | Type | Description
 **items** | array | An array containing a list of invoice item objects.
 **customer** | object |
 **charge** | object |
+**metadata** | object |
 
 ### Example
 
@@ -86,7 +87,8 @@ Name | Type | Description
 			"count": 0,
 			"data": []
 		}
-	}
+	},
+	"metadata": {}
 }
 ```
 
@@ -170,7 +172,8 @@ Name | Required | Description
 					"count": 0,
 					"data": []
 				}
-			}
+			},
+			"metadata": {}
 		},
 		{...}
 	]
@@ -190,3 +193,24 @@ It is possible with certain invoices to attempt a payment at the present time. Y
 ### Example response
 
 Will respond with `200 OK` status, and the full invoice object if payment could go through, or fail with HTTP status codes.
+
+Update an invoice
+-----------------
+
+Only metadata can be updated.
+
+### Arguments
+
+Name | Required/Optional | Description
+--:|:-:|:--
+**metadata** | required | An array.
+
+### Example request update
+
+	$ curl https://secure.peakium.com/api/v1/invoice/in_TlQFJ1ZvXfuX2g/ \
+		-u pk_gEVUPX6FwObZSgg3v0BjkVxmdzatPyV9: \
+		-d metadata[order_number]="#0012"
+
+### Example response
+
+Will respond with `200 OK` status, and the full invoice object if valid, or fail with failure HTTP status code.

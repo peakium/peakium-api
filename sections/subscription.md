@@ -55,7 +55,8 @@ Name | Type | Description
 	"period_end": 1375217068,
 	"next_charge": 1375217068,
 	"status": "active",
-	"customer": "cu4321"
+	"customer": "cu4321",
+	"metadata": {}
 }
 ```
 
@@ -101,7 +102,8 @@ Name | Required | Description
 			"period_end": 1375217068,
 			"next_charge": 1375217068,
 			"status": "active",
-			"customer": "cu4321"
+			"customer": "cu4321",
+			"metadata": {}
 		},
 		{...}
 	]
@@ -149,7 +151,8 @@ Name | Required | Description
 			"period_end": 1375217068,
 			"next_charge": 1375217068,
 			"status": "active",
-			"customer": "cu4321"
+			"customer": "cu4321",
+			"metadata": {}
 		},
 		{...}
 	]
@@ -185,7 +188,8 @@ To retrieve a specific subscription resource, you need to use the [Customer](/se
 	"period_end": 1375217068,
 	"next_charge": 1375217068,
 	"status": "active",
-	"customer": "cu4321"
+	"customer": "cu4321",
+	"metadata": {}
 }
 ```
 
@@ -222,6 +226,7 @@ You need to use the [Customer](/sections/customer.md) resource for the subscript
 	"period_end": 1375217068,
 	"next_charge": 1375217068,
 	"status": "cancelled",
-	"customer": "cu4321"
+	"customer": "cu4321",
+	"metadata": {}
 }
 ```

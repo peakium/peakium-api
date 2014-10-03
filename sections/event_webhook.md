@@ -18,7 +18,7 @@ Name | Type | Description
 **last_delivery_attempt** | integer | The timestamp for the last delivery attempt
 **delivered** | boolean |
 **timestamp_delivered** | integer |
-**webhook** | object | The webhook object.
+**url** | string |
 **event** | object | The event object.
 
 ### Example
@@ -30,10 +30,7 @@ Name | Type | Description
 	"last_delivery_attempt": 1375217068,
 	"delivered": true,
 	"delivered_timestamp": 1375217068,
-	"webhook": {
-		"object": "webhook",
-		"url": "http://example.com/webhook_endpoint/"
-	},
+	"url": "http://example.com/webhook_endpoint/",
 	"event": {
 		"id": "ev_TlSEvdkrRAg4aD",
 		"object": "event",
@@ -78,10 +75,7 @@ Name | Required | Description
 			"last_delivery_attempt": 1375217068,
 			"delivered": true,
 			"delivered_timestamp": 1375217068,
-			"webhook": {
-				"object": "webhook",
-				"url": "http://example.com/webhook_endpoint/"
-			},
+			"url": "http://example.com/webhook_endpoint/",
 			"event": {
 				"id": "ev_TlSEvdkrRAg4aD",
 				"object": "event",
